@@ -6,6 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .clip-path-element {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  /* Defineix la forma del clip-path */
+  background-image: url('../Imatges/Inici/Logo.svg'), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  /* Imatge de fons amb superposició de color */
+  background-size: cover;
+  /* Ajusta la mida de la imatge per cobrir tot l'element */
+  background-repeat: no-repeat;
+  /* Evita que la imatge es repeteixi */
+  width: 200px;
+  height: 200px;
+  margin:  auto;
+  /* Marge i centrar l'element */
+  animation: bounce 2s infinite alternate;
+  /* Anima l'element */
+}
+
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100 font-sans">
@@ -69,6 +98,10 @@
       </div>
 
     </section>
+
+    <!-- Element amb clip-path i animació CSS -->
+    <div class="clip-path-element"></div>
+
   </main>
 
 </body>
