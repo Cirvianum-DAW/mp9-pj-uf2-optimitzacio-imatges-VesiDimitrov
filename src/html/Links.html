@@ -1,72 +1,114 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FUENTES DE INFORMACION</title>
+    <title>Fons d'Informació</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-gray-100">
 
-    <header class="bg-gray-800 text-white p-10">
-        <div class="text-center">
-            <h1 class="text-8xl font-semibold font-serif">FUENTES DE INFORMACION</h1>
-            <nav>
-                <div class=" text-white ">
-                    <div class=" font-thin mt-8 text-2xl">
-                        <a class="hover:bg-gray-700 rounded-lg" href="Index.html">Home</a>
-                        <a class="hover:bg-gray-700 rounded-lg" href="Calendar.html">Calendar</a>
-                        <a class="hover:bg-gray-700 rounded-lg" href="Leagues.html">Leagues</a>
-                    </div>
-                </div>
-            </nav>
+    <header class="bg-gray-400 text-black sm:p-2">
+        <div class="flex justify-between items-center">
+
+            <img src="../Imatges/Inici/Logo.svg" alt="Logo" class="w-16  sm:w-44 h-44">
+            <div class="hidden sm:flex flex-col items-center justify-center text-center flex-grow flex-shrink">
+                <h1 class="text-7xl font-semibold font-serif">Fons d'Informació</h1>
+
+                <!-- Enllaços del menú -->
+                <nav class="font-thin mt-2 text-sm">
+                    <a class="hover:bg-gray-300 rounded-lg px-2" href="Index.html">Home</a>
+                    <a class="hover:bg-gray-300 rounded-lg px-2" href="Calendar.html">Calendar</a>
+                    <a class="hover:bg-gray-300 rounded-lg px-2" href="Leagues.html">Leagues</a>
+                </nav>
+            </div>
+
+            <!-- Menú hamburguesa -->
+            <button id="menu-toggle" class="block sm:hidden focus:outline-none">
+                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
         </div>
     </header>
+    <div id="menu" class="hidden bg-gray-400 sm:hidden">
+        <nav class="flex flex-col items-center justify-center text-center py-4">
+            <a class="hover:bg-gray-500 rounded-lg px-2" href="Index.html">Home</a>
+            <a class="hover:bg-gray-500 rounded-lg px-2" href="AboutUs.html">About</a>
+            <a class="hover:bg-gray-500 rounded-lg px-2" href="Calendar.html">Calendar</a>
+            <a class="hover:bg-gray-500 rounded-lg px-2" href="Leagues.html">Leagues</a>
+        </nav>
+    </div>
 
-    
-    <main>
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+
+    <main class="container mx-auto my-8">
         <div class="space-y-8">
             <div class="bg-white p-6 rounded-md shadow-md text-center">
-                <h2 class="text-xl font-semibold mb-4">PHOTOGRAPHS</h2>
-                <p>Some of the photographs are screenshots taken by me.</p>
+                <h2 class="text-xl md:text-2xl font-semibold mb-4">Fotografies Capturades de Pantalla</h2>
+                <p class="text-sm md:text-base">Algunes de les fotografies són captures de pantalla realitzades per mi.</p>
             </div>
             <div class="bg-white p-6 rounded-md shadow-md text-center">
-                <h2 class="text-xl font-semibold mb-4">EXTERNAL PHOTOS</h2>
-                <p>Some of the images used are sourced from the following sites:</p>
-                <div class="mt-4">
-                    <a href="https://pixabay.com/" class="block text-blue-500 hover:underline">Pixabay</a>
-                </div>
-                <div class="mt-4">
-                    <a href="https://www.pexels.com/" class="block text-blue-500 hover:underline">Pexels</a>
-                </div>
+                <h2 class="text-xl md:text-2xl font-semibold mb-4">Fotografies Sense Drets d'Autor</h2>
+                <p class="text-sm md:text-base">Algunes de les imatges s'han obtingut de llocs web com Unsplash i Pixabay:</p>
                 <div class="mt-4">
                     <a href="https://unsplash.com/" class="block text-blue-500 hover:underline">Unsplash</a>
+                    <a href="https://pixabay.com/" class="block text-blue-500 hover:underline">Pixabay</a>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-md shadow-md text-center">
+                <h2 class="text-xl md:text-2xl font-semibold mb-4">Fotografies amb Drets d'Autor</h2>
+                <p class="text-sm md:text-base">Algunes de les imatges tenen drets d'autor i s'han obtingut de Google:</p>
+                <div class="mt-4">
+                    <a href="https://www.google.com/" class="block text-blue-500 hover:underline">Google</a>
                 </div>
             </div>
         </div>
-        
-        <div class="flex justify-center py-44">
-            <a href="AboutUs.html" class="text-2xl text-black hover:text-blue-600">Back</a>
+
+        <div class="flex justify-center mt-16">
+            <a href="AboutUs.html" class="text-xl md:text-2xl text-black hover:text-blue-600">Tornar</a>
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white mt-4">
+    <footer class="bg-gray-800 text-white p-4 sm:p-6">
         <div class="container mx-auto flex flex-col justify-center items-center">
-            <div class="my-3">
-                <div class=" text-white ">
-                    <div class=" font-thin mt-2 text-2xl">
+            <div class="text-white my-3 sm:hidden">
+                <!-- Menú hamburguesa -->
+                <button id="footer-menu-toggle" class="focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <div id="footer-menu" class="hidden bg-gray-800">
+                    <nav class="flex flex-col items-center justify-center text-center py-4">
                         <a class="hover:bg-gray-700 rounded-lg" href="Index.html">Home</a>
                         <a class="hover:bg-gray-700 rounded-lg" href="Calendar.html">Calendar</a>
                         <a class="hover:bg-gray-700 rounded-lg" href="Leagues.html">Leagues</a>
-                    </div>
+                    </nav>
                 </div>
             </div>
+
             <div class="text-center">
-                <p>&copy; Made by Vesi Dimitrov. All rights reserved.</p>
-                <p>Dirección: Calle Principal, Ciudad</p>
-                <p class="mb-4">Email: info@futbolclub.com</p>
+                <div class="font-thin m-2 text-base sm:text-lg hidden sm:block">
+                    <a class="hover:bg-gray-700 rounded-lg" href="Index.html">Home</a>
+                    <a class="hover:bg-gray-700 rounded-lg" href="Calendar.html">Calendar</a>
+                    <a class="hover:bg-gray-700 rounded-lg" href="Leagues.html">Leagues</a>
+                </div>
+
+                <p class="text-xs sm:text-sm">&copy; Made by Vesi Dimitrov. All rights reserved.</p>
+                <p class="text-xs sm:text-sm">Dirección: Calle Principal, Ciudad</p>
+                <p class="text-xs sm:text-sm">Email: info@futbolclub.com</p>
             </div>
         </div>
     </footer>
