@@ -3,18 +3,18 @@ import imagemin from 'imagemin';
 import imageminWebp from 'imagemin-webp';
 
 // Ruta d'entrada de les imatges a optimitzar
-const imputPath = './src/Images';
+const imputPath = '../src/Imatges';
 
 // Ruta de sortida de les imatges optimitzades en format WebP
-const outputPath = './src/output';
+const outputPath = '../src/output';
 
 //Configuracio d'imagemin
 const config = {
     plugins: [
         imageminWebp({
-            quality: 75 // Qualitat d'exportacio i compressio de les imatges
-        })
-    ]
+            quality: 30, // Qualitat d'exportacio i compressio de les imatges
+        }),
+    ],
 };
 
 //Proces d'optimitzacio de les imatges a traves d'imagemin
