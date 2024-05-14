@@ -12,7 +12,7 @@
     <header class="bg-gray-200 text-black sm:p-2">
         <div class="flex justify-between items-center">
             <!-- Logo -->
-            <img src="../Imatges/Inici/Logo.svg" alt="Logo" class="w-16 h-16 sm:w-44 h-44">
+            <img src="../Imatges/Logo.svg" alt="Logo" class="w-16  sm:w-44 h-44">
     
             <!-- Text i enllaços (centrats) -->
             <div class="hidden sm:flex flex-col items-center justify-center text-center flex-grow flex-shrink">
@@ -27,10 +27,11 @@
                 </nav>
             </div>
     
-            <!-- Menú hamburguesa (centrat) -->
-            <button id="header-menu-toggle" class="block sm:hidden focus:outline-none justify-center">
+            <!-- Menú hamburguesa -->
+            <button id="menu-toggle" class="block sm:hidden focus:outline-none">
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
@@ -41,7 +42,7 @@
     <div id="menu" class="hidden bg-gray-200 sm:hidden">
         <nav class="flex flex-col items-center justify-center text-center py-4">
             <a class="hover:bg-gray-400 rounded-lg px-2" href="Index.html">Home</a>
-            <a class="hover:bg-gray-400 rounded-lg px-2" href="AboutUs.html">About</a>
+            <a class="hover:bg-gray-400 rounded-lg px-2" href="Calendar.html">Calendar</a>
             <a class="hover:bg-gray-400 rounded-lg px-2" href="Leagues.html">Leagues</a>
         </nav>
     </div>
@@ -55,7 +56,7 @@
 
 
     <div class="bg-cover object-cover w-full min-h-screen pb-6 flex justify-center items-center"
-        style="background-image: url(../Imatges/Calendar/grass-2616911_1280.jpg)">
+        style="background-image: url(../output/grass-2616911_1280.webp)">
 
         <div class="p-4 sm:p-6">
             <h1 class="text-lg sm:text-3xl font-bold text-center pt-2 sm:pt-4 mb-4 sm:mb-6">Partidos Hoy</h1>
