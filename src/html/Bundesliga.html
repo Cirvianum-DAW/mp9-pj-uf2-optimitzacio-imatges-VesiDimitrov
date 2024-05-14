@@ -1,190 +1,253 @@
 <!DOCTYPE html>
 <html lang="ca">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bundesliga - Gestor d'Informació Futbolística</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="bg-white">
-
+  <body class="bg-white">
     <header class="bg-gray-400 text-black sm:p-2">
-        <div class="flex justify-between items-center">
+      <div class="flex justify-between items-center">
+        <img src="../Imatges/Logo.svg" alt="Logo" class="w-16 sm:w-44 h-44" />
+        <div
+          class="hidden sm:flex flex-col items-center justify-center text-center flex-grow flex-shrink"
+        >
+          <h1 class="text-4xl font-semibold font-serif">BUNDESLIGA</h1>
 
-            <img src="../Imatges/Logo.svg" alt="Logo" class="w-16  sm:w-44 h-44">
-            <div class="hidden sm:flex flex-col items-center justify-center text-center flex-grow flex-shrink">
-                <h1 class="text-4xl font-semibold font-serif">BUNDESLIGA</h1>
-
-                <!-- Enllaços del menú -->
-                <nav class="font-thin mt-2 text-sm">
-                    <a class="hover:bg-gray-300 rounded-lg px-2" href="Index.html">Home</a>
-                    <a class="hover:bg-gray-300 rounded-lg px-2" href="AboutUs.html">About</a>
-                    <a class="hover:bg-gray-300 rounded-lg px-2" href="Calendar.html">Calendar</a>
-                    <a class="hover:bg-gray-300 rounded-lg px-2" href="Leagues.html">Leagues</a>
-                </nav>
-            </div>
-
-            <!-- Menú hamburguesa -->
-            <button id="menu-toggle" class="block sm:hidden focus:outline-none">
-                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
+          <!-- Enllaços del menú -->
+          <nav class="font-thin mt-2 text-sm">
+            <a class="hover:bg-gray-300 rounded-lg px-2" href="Index.html"
+              >Home</a
+            >
+            <a class="hover:bg-gray-300 rounded-lg px-2" href="AboutUs.html"
+              >About</a
+            >
+            <a class="hover:bg-gray-300 rounded-lg px-2" href="Calendar.html"
+              >Calendar</a
+            >
+            <a class="hover:bg-gray-300 rounded-lg px-2" href="Leagues.html"
+              >Leagues</a
+            >
+          </nav>
         </div>
+
+        <!-- Menú hamburguesa -->
+        <button id="menu-toggle" class="block sm:hidden focus:outline-none">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
     </header>
     <div id="menu" class="hidden bg-gray-400 sm:hidden">
-        <nav class="flex flex-col items-center justify-center text-center py-4">
-            <a class="hover:bg-gray-500 rounded-lg px-2" href="Index.html">Home</a>
-            <a class="hover:bg-gray-500 rounded-lg px-2" href="AboutUs.html">About</a>
-            <a class="hover:bg-gray-500 rounded-lg px-2" href="Calendar.html">Calendar</a>
-            <a class="hover:bg-gray-500 rounded-lg px-2" href="Leagues.html">Leagues</a>
-        </nav>
+      <nav class="flex flex-col items-center justify-center text-center py-4">
+        <a class="hover:bg-gray-500 rounded-lg px-2" href="Index.html">Home</a>
+        <a class="hover:bg-gray-500 rounded-lg px-2" href="AboutUs.html"
+          >About</a
+        >
+        <a class="hover:bg-gray-500 rounded-lg px-2" href="Calendar.html"
+          >Calendar</a
+        >
+        <a class="hover:bg-gray-500 rounded-lg px-2" href="Leagues.html"
+          >Leagues</a
+        >
+      </nav>
     </div>
 
     <script>
-        document.getElementById("menu-toggle").addEventListener("click", function () {
-            var menu = document.getElementById("menu");
-            menu.classList.toggle("hidden");
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("menu");
+          menu.classList.toggle("hidden");
         });
     </script>
 
     <!-- Secció de Bundesliga -->
     <main class="bg-cover object-cover w-full min-h-screen text-left">
-        <div class="container mx-auto p-8">
-            <div class="flex flex-col md:flex-row justify-between">
-                <div class="md:w-1/2">
-                    <h1 class="text-3xl font-bold mb-6 ml-28">Bundesliga - Alemanya</h1>
-                    <p class="mb-8 mx-4 text-justify text-lg">
-                        La Bundesliga és una de les lligues de futbol més prestigioses d'Europa, captivant els fans de
-                        tot el món
-                        amb la seva rica història, una afició apassionada i talent de classe mundial. Com a la primera
-                        divisió de
-                        futbol professional a Alemanya, la Bundesliga mostra alguns dels millors talents futbolístics
-                        del món, amb
-                        clubs com el Bayern de Munic, el Borussia Dortmund i el RB Leipzig competint per la glòria.
-                    </p>
-                    <ul class="list-disc ml-8 mb-8 font-semibold text-lg">
-                        <li>Fundada: 1963</li>
-                        <li>Nombre d'equips: 18</li>
-                        <li>Actuals campions: Bayern de Munic</li>
-                        <li>Més títols: Bayern de Munic (31 títols)</li>
-                    </ul>
-                    <p class="mb-8 mx-4 text-justify text-lg">
-                        A Gestor d'Informació Futbolística, estem dedicats a oferir-vos una cobertura completa de la
-                        Bundesliga,
-                        incloent previsualitzacions de partits, anàlisis, perfils de jugadors, notícies de
-                        transferències i més.
-                    </p>
-                    <p class="mb-8 mx-4 text-justify text-lg">
-                        Mantingueu-vos actualitzats amb les últimes notícies, resultats i anàlisis de la Bundesliga amb
-                        Gestor
-                        d'Informació Futbolística. Acompanyeu-nos mentre explorem la passió, habilitat i intensitat del
-                        futbol alemany.
-                    </p>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="../output/Bundesliga.webp" alt="Bundesliga"
-                        class="w-full object-cover rounded-lg">
-                </div>
-            </div>
-
-            <!-- Secció de Màxims Golejadors -->
-            <div class="flex flex-col md:flex-row justify-between mb-12">
-                <div class="md:w-1/2">
-                    <img src="../Imatges/delanter.PNG" alt="Màxims Golejadors"
-                        class="w-full object-cover rounded-lg mt-4">
-                </div>
-                <div class="md:w-1/2 mt-2">
-                    <h2 class="text-2xl font-bold ml-4 mb-4">Màxims Golejadors</h2>
-                    <ul class="list-disc ml-10 mb-8 font-semibold text-lg">
-                        <li>Robert Lewandowski - 39 gols</li>
-                        <li>Erling Haaland - 27 gols</li>
-                        <li>Andrej Kramarić - 20 gols</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Secció de Porters Menys Golejats -->
-            <div class="flex flex-col md:flex-row justify-between mb-12">
-                <div class="md:w-1/2">
-                    <h2 class="text-2xl font-bold mb-4">Porters Menys Golejats</h2>
-                    <ul class="list-disc ml-8 mb-8 font-semibold text-lg">
-                        <li>Manuel Neuer - 32 gols encaixats</li>
-                        <li>Péter Gulácsi - 38 gols encaixats</li>
-                        <li>Yann Sommer - 39 gols encaixats</li>
-                    </ul>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="../Imatges/porteros.PNG" alt="Porters Menys Golejats"
-                        class="w-full object-cover rounded-lg">
-                </div>
-            </div>
-
-            <!-- Secció de Màxims Assistents -->
-            <div class="flex flex-col md:flex-row justify-between mb-12">
-                <div class="md:w-1/2">
-                    <img src="../Imatges/Asistencia.PNG" alt="Màxims Assistents"
-                        class="w-full object-cover rounded-lg ">
-                </div>
-                <div class="md:w-1/2 mt-2">
-                    <h2 class="text-2xl font-bold ml-4 mb-4">Màxims Assistents</h2>
-                    <ul class="list-disc ml-10 mb-8 font-semibold text-lg">
-                        <li>Thomas Müller - 19 assistències</li>
-                        <li>Josip Brekalo - 13 assistències</li>
-                        <li>Christopher Nkunku - 13 assistències</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container mx-auto p-8">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="md:w-1/2">
+            <h1 class="text-3xl font-bold mb-6 ml-28">Bundesliga - Alemanya</h1>
+            <p class="mb-8 mx-4 text-justify text-lg">
+              La Bundesliga és una de les lligues de futbol més prestigioses
+              d'Europa, captivant els fans de tot el món amb la seva rica
+              història, una afició apassionada i talent de classe mundial. Com a
+              la primera divisió de futbol professional a Alemanya, la
+              Bundesliga mostra alguns dels millors talents futbolístics del
+              món, amb clubs com el Bayern de Munic, el Borussia Dortmund i el
+              RB Leipzig competint per la glòria.
+            </p>
+            <ul class="list-disc ml-8 mb-8 font-semibold text-lg">
+              <li>Fundada: 1963</li>
+              <li>Nombre d'equips: 18</li>
+              <li>Actuals campions: Bayern de Munic</li>
+              <li>Més títols: Bayern de Munic (31 títols)</li>
+            </ul>
+            <p class="mb-8 mx-4 text-justify text-lg">
+              A Gestor d'Informació Futbolística, estem dedicats a oferir-vos
+              una cobertura completa de la Bundesliga, incloent
+              previsualitzacions de partits, anàlisis, perfils de jugadors,
+              notícies de transferències i més.
+            </p>
+            <p class="mb-8 mx-4 text-justify text-lg">
+              Mantingueu-vos actualitzats amb les últimes notícies, resultats i
+              anàlisis de la Bundesliga amb Gestor d'Informació Futbolística.
+              Acompanyeu-nos mentre explorem la passió, habilitat i intensitat
+              del futbol alemany.
+            </p>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="../output/Bundesliga.webp"
+              alt="Bundesliga"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
         </div>
+
+        <!-- Secció de Màxims Golejadors -->
+        <div class="flex flex-col md:flex-row justify-between mb-12">
+          <div class="md:w-1/2">
+            <img
+              src="../Imatges/delanter.png"
+              alt="Màxims Golejadors"
+              class="w-full object-cover rounded-lg mt-4"
+            />
+          </div>
+          <div class="md:w-1/2 mt-2">
+            <h2 class="text-2xl font-bold ml-4 mb-4">Màxims Golejadors</h2>
+            <ul class="list-disc ml-10 mb-8 font-semibold text-lg">
+              <li>Robert Lewandowski - 39 gols</li>
+              <li>Erling Haaland - 27 gols</li>
+              <li>Andrej Kramarić - 20 gols</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Secció de Porters Menys Golejats -->
+        <div class="flex flex-col md:flex-row justify-between mb-12">
+          <div class="md:w-1/2">
+            <h2 class="text-2xl font-bold mb-4">Porters Menys Golejats</h2>
+            <ul class="list-disc ml-8 mb-8 font-semibold text-lg">
+              <li>Manuel Neuer - 32 gols encaixats</li>
+              <li>Péter Gulácsi - 38 gols encaixats</li>
+              <li>Yann Sommer - 39 gols encaixats</li>
+            </ul>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="../Imatges/porteros.png"
+              alt="Porters Menys Golejats"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
+        </div>
+
+        <!-- Secció de Màxims Assistents -->
+        <div class="flex flex-col md:flex-row justify-between mb-12">
+          <div class="md:w-1/2">
+            <img
+              src="../Imatges/Asistencia.png"
+              alt="Màxims Assistents"
+              class="w-full object-cover rounded-lg"
+            />
+          </div>
+          <div class="md:w-1/2 mt-2">
+            <h2 class="text-2xl font-bold ml-4 mb-4">Màxims Assistents</h2>
+            <ul class="list-disc ml-10 mb-8 font-semibold text-lg">
+              <li>Thomas Müller - 19 assistències</li>
+              <li>Josip Brekalo - 13 assistències</li>
+              <li>Christopher Nkunku - 13 assistències</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
 
-
     <footer class="bg-gray-800 text-white p-4 sm:p-6">
-        <div class="container mx-auto flex flex-col justify-center items-center">
-            <div class="text-white my-3 sm:hidden">
-                <!-- Menú hamburguesa -->
-                <button id="footer-menu-toggle" class="focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+      <div class="container mx-auto flex flex-col justify-center items-center">
+        <div class="text-white my-3 sm:hidden">
+          <!-- Menú hamburguesa -->
+          <button id="footer-menu-toggle" class="focus:outline-none">
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
 
-                <div id="footer-menu" class="hidden bg-gray-800">
-                    <nav class="flex flex-col items-center justify-center text-center py-4">
-                        <a class="hover:bg-gray-700 rounded-lg" href="Index.html">Home</a>
-                        <a class="hover:bg-gray-700 rounded-lg" href="AboutUs.html">About</a>
-                        <a class="hover:bg-gray-700 rounded-lg" href="Calendar.html">Calendar</a>
-                        <a class="hover:bg-gray-700 rounded-lg" href="Leagues.html">Leagues</a>
-                    </nav>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <div class="font-thin m-2 text-base sm:text-lg hidden sm:block">
-                    <a class="hover:bg-gray-700 rounded-lg" href="Index.html">Home</a>
-                    <a class="hover:bg-gray-700 rounded-lg" href="AboutUs.html">About</a>
-                    <a class="hover:bg-gray-700 rounded-lg" href="Calendar.html">Calendar</a>
-                    <a class="hover:bg-gray-700 rounded-lg" href="Leagues.html">Leagues</a>
-                </div>
-
-                <p class="text-xs sm:text-sm">&copy; Made by Vesi Dimitrov. All rights reserved.</p>
-                <p class="text-xs sm:text-sm">Dirección: Calle Principal, Ciudad</p>
-                <p class="text-xs sm:text-sm">Email: info@futbolclub.com</p>
-            </div>
+          <div id="footer-menu" class="hidden bg-gray-800">
+            <nav
+              class="flex flex-col items-center justify-center text-center py-4"
+            >
+              <a class="hover:bg-gray-700 rounded-lg" href="Index.html">Home</a>
+              <a class="hover:bg-gray-700 rounded-lg" href="AboutUs.html"
+                >About</a
+              >
+              <a class="hover:bg-gray-700 rounded-lg" href="Calendar.html"
+                >Calendar</a
+              >
+              <a class="hover:bg-gray-700 rounded-lg" href="Leagues.html"
+                >Leagues</a
+              >
+            </nav>
+          </div>
         </div>
+
+        <div class="text-center">
+          <div class="font-thin m-2 text-base sm:text-lg hidden sm:block">
+            <a class="hover:bg-gray-700 rounded-lg" href="Index.html">Home</a>
+            <a class="hover:bg-gray-700 rounded-lg" href="AboutUs.html"
+              >About</a
+            >
+            <a class="hover:bg-gray-700 rounded-lg" href="Calendar.html"
+              >Calendar</a
+            >
+            <a class="hover:bg-gray-700 rounded-lg" href="Leagues.html"
+              >Leagues</a
+            >
+          </div>
+
+          <p class="text-xs sm:text-sm">
+            &copy; Made by Vesi Dimitrov. All rights reserved.
+          </p>
+          <p class="text-xs sm:text-sm">Dirección: Calle Principal, Ciudad</p>
+          <p class="text-xs sm:text-sm">Email: info@futbolclub.com</p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        document.getElementById("footer-menu-toggle").addEventListener("click", function () {
-            var menu = document.getElementById("footer-menu");
-            menu.classList.toggle("hidden");
+      document
+        .getElementById("footer-menu-toggle")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("footer-menu");
+          menu.classList.toggle("hidden");
         });
     </script>
-
-</body>
-
+  </body>
 </html>
