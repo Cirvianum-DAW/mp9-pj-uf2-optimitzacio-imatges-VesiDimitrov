@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Projecte que utilitza Tailwind CSS i Parcel",
   "scripts": {
-    "dev": "parcel src/html/Index.html && parcel src/html/Index.html --open",
+    "dev": "parcel src/html/Index.html --open",
     "build": "parcel build src/html/Index.html"
   },
   "keywords": [
